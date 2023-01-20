@@ -1,4 +1,4 @@
-def count_guarding_pairs(ground):
+def count_attacking_pairs(ground):
     pairs = 0
 
     for queen in ground:
@@ -17,3 +17,16 @@ def count_guarding_pairs(ground):
                     
                     
     return pairs // 2
+
+def fitness(ground):
+    N = len(ground)
+    total_pairs = (N * (N - 1)) // 2
+    attacking_pairs = count_attacking_pairs(ground)
+
+    return total_pairs - attacking_pairs
+
+def main():
+    print(fitness([2,4,7,4,8,5,5,2]))
+
+if __name__ == "__main__":
+    main()
