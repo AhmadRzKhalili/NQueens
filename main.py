@@ -105,7 +105,7 @@ def main():
         stop = timeit.default_timer()
         avg_time = avg_time + (stop - start)
 
-        # print('solution: ', result[0], 'generation number: ', result[1])
+        print('solution: ', result[0], 'generation number: ', result[1])
         avg_generation += result[1]
 
     avg_time /= 100
